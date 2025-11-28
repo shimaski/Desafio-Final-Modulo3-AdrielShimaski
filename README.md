@@ -2,8 +2,8 @@
 
 # Relatório de Teste de Penetração - TechCorp Solutions
 
-**Autor:** Adrielm Shimaski   
-**Data:** Novembro 2025 
+**Autor:** Adriel Shimaski   
+**Data:** 21  Novembro 2025 
 
 ![alt text](logo.png)
 
@@ -63,6 +63,6 @@ O relatório foi estruturado de forma profissional, seguindo referências PTES, 
 
 ## Contato
 
-**Responsável Técnico:** Adriel Shimaski
+**Responsável Técnico:** Adriel Shimaski 
 **Email:** adriel889alves@gmail.com  
 **Telefone:** [21981335044]
