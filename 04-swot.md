@@ -26,7 +26,7 @@
 - Possibilidade de ataques ransomware  
 - Multas por não conformidade com regulamentações  
 
-##QUADRO SWOT DA SEGURANÇA DO AMBIENTE
+## QUADRO SWOT DA SEGURANÇA DO AMBIENTE
 
 ![alt text](deepseek_mermaid_20251128_4f6964.svg)
 
