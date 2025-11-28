@@ -5,6 +5,8 @@
 **Autor:** Adrielm Shimaski   
 **Data:** Novembro 2025 
 
+logo![alt text](logo.png)
+
 Este repositório contém toda a documentação, evidências e análise do teste de penetração realizado no ambiente da TechCorp Solutions entre **25 e 30 de Novembro de 2024**.
 
 O relatório foi estruturado de forma profissional, seguindo referências PTES, NIST e OWASP, contendo:
