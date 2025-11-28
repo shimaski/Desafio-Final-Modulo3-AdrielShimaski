@@ -7,7 +7,7 @@
 
 ![alt text](logo.png)
 
-Este repositório contém toda a documentação, evidências e análise do teste de penetração realizado no ambiente da TechCorp Solutions entre **25 e 30 de Novembro de 2024**.
+Este repositório contém toda a documentação, evidências e análise do teste de penetração realizado no ambiente da TechCorp Solutions entre **21 e 30 de Novembro de 2025**.
 
 O relatório foi estruturado de forma profissional, seguindo referências PTES, NIST e OWASP, contendo:
 
