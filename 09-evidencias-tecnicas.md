@@ -93,23 +93,6 @@ echo "FLAG{b4ckup_scr1pt_f0und}" >> /tmp/backup.log
 # FLAG{scr1pt_4n4lys1s_sk1ll}
 ```
 
-### 9.6 Script de Backup  
-**Local:** `/opt/backup_script.sh`
-
-```bash
-#!/bin/bash
-BACKUP_DIR="/var/backups/techcorp"
-DATE=$(date +%Y%m%d)
-DB_USER="root"
-DB_PASS="r00t_P4ssw0rd_2024"
-
-mysqldump -u $DB_USER -p$DB_PASS techcorp_db > $BACKUP_DIR/db_backup_$DATE.sql
-tar -czf $BACKUP_DIR/web_backup_$DATE.tar.gz /var/www/html
-
-echo "FLAG{b4ckup_scr1pt_f0und}" >> /tmp/backup.log
-# FLAG{scr1pt_4n4lys1s_sk1ll}
-
-
 ### 9.7 Consultas SQL por SQL Injection
 
 **Consultas utilizadas:**
