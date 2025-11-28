@@ -67,5 +67,85 @@ location /admin/ {
     deny all;
 }
 
+```
 
 
+### 7.2.2 Auditoria de Permissões
+
+**Diretórios a verificar:**
+* /home/techcorp/
+* /var/backups/
+* /opt/backup_script.sh
+
+**Comandos:**
+```bash
+chmod 600 sensitive_file
+chown root:root sensitive_file
+
+```
+
+### 7.2.3 Limpeza e Proteção de Logs
+
+**Correção:**
+```bash
+truncate -s 0 ~/.bash_history
+export HISTSIZE=0
+export HISTFILESIZE=0
+```
+### 7.2.4 Hardening de SSH
+
+**Recomendações:**
+* Desativar login com senha.
+* Forçar uso de chave pública.
+* Limitar usuários permitidos.
+* Configurar Fail2Ban.
+
+---
+
+## 7.3 Melhorias de Médio Prazo (Prazo: 1 mês)
+
+### 7.3.1 Política de Segurança
+
+**Implementar:**
+* Política de desenvolvimento seguro.
+* Treinamento para desenvolvedores.
+* Revisão de código periódica.
+* Processo de CI/CD com análise SAST.
+
+---
+
+### 7.3.2 Sistema de Monitoramento
+
+**Recomendações:**
+* Centralizar logs (ELK, Splunk ou Graylog).
+* Alertas para tentativas de SQL Injection.
+* Monitoramento de acessos SSH suspeitos.
+
+---
+
+### 7.3.3 Backup Seguro
+
+**Recomendações:**
+* Criptografar backups com GPG.
+* Mover backups para ambiente segregado.
+* Remover credenciais hardcoded.
+
+---
+
+## 7.4 Melhorias de Longo Prazo (2-3 meses)
+
+### 7.4.1 Implantação de SIEM
+
+**Benefícios:**
+* Correlação de eventos.
+* Detecção de incidentes.
+* Alertas centralizados.
+
+---
+
+### 7.4.2 Testes Periódicos
+
+**Calendário sugerido:**
+* Teste trimestral.
+* Testes após cada release importante.
+* Auditoria anual completa.
