@@ -1,5 +1,4 @@
 ## 📄 **10-conclusao.md**
-```markdown
 # Conclusão
 
 ## Resumo Executivo Final
