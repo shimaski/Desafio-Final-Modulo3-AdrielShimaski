@@ -1,6 +1,5 @@
 # 05-vulnerabilidades.md
 
-# Análise de Vulnerabilidades
 
 ## Vulnerabilidades Críticas Identificadas
 
@@ -20,14 +19,14 @@
 ```php
 $db_user = 'techcorp_user';
 $db_pass = 'T3chC0rp_S3cr3t_2024!';
-
+```
 
 ### 3. FTP Anônimo Ativo
 **Severidade:** Alta  
-**Flag:** `FLAG{ftp_4n0nym0us_4cc3ss}`  
+**Flag:** FLAG{ftp_4n0nym0us_4cc3ss}`  
 **Descrição:** Serviço FTP permite acesso anônimo  
 **Impacto:** Exposição de diretórios e arquivos sensíveis  
-**Evidência:** Acesso via: `ftp 98.95.207.28`
+**Evidência:** Acesso via: ftp 98.95.207.28
 
 ---
 
@@ -84,7 +83,7 @@ $db_pass = 'T3chC0rp_S3cr3t_2024!';
 ```bash
 mysql -u root -p # senha r00t_P4ssw0rd_2024
 
----
+```
 
 ### 7. Diretório Home SSH Comprometido
 **Severidade:** Alta  
@@ -141,6 +140,7 @@ Disallow: /admin/
 Disallow: /backup/
 Disallow: /config/
 
+
 ### 13. Vazamento de Código Fonte
 **Severidade:** Baixa  
 **Flag:** `FLAG{b4s1c_s0urc3_c0d3_1nsp3ct10n}`  
@@ -149,3 +149,36 @@ Disallow: /config/
 **Evidência:**
 ```html
 <!-- FLAG{b4s1c_s0urc3_c0d3_1nsp3ct10n} -->
+
+```
+
+### 14. Dados Ocultos no Banco
+**Severidade:** Alta  
+**Flag:** `FLAG{h1dd3n_d4t4_t4bl3_f0und}`  
+**Descrição:** Tabelas ocultas descobertas via SQLi  
+**Impacto:** Acesso a dados sensíveis  
+**Evidência:**
+```sql
+UNION SELECT secret_data,1,1 FROM secret_data;
+
+```
+
+### 15. Views do Banco Descobertas
+**Severidade:** Alta  
+**Flag:** `FLAG{v13w_d1sc0v3ry_4dv4nc3d}`  
+**Descrição:** Enumeração de views do banco via SQLi  
+**Impacto:** Mapeamento completo da estrutura de dados  
+**Evidência:**
+```sql
+UNION SELECT table_name,1,1 FROM information_schema.views;
+
+```
+
+### 16. Escalação de Privilégio
+**Severidade:** Crítica  
+**Flag:** `FLAG{pr1v1l3g3_3sc4l4t10n_succ3ss}`  
+**Descrição:** Acesso root via credenciais comprometidas  
+**Impacto:** Controle total do sistema  
+**Evidência:** Acesso SSH com credenciais de administrador
+
+---
